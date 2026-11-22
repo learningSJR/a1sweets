@@ -1,0 +1,450 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   01. GLOBAL STYLES
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffdf5;
+  color: #25223c;
+}
+
+/* =========================================================
+   02. TYPOGRAPHY
+   ========================================================= */
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: Georgia, serif;
+  letter-spacing: -0.04em;
+}
+
+/* =========================================================
+   03. HERO SLIDER
+   ========================================================= */
+
+.hero-shade {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 8, 29, 0.86),
+    rgba(9, 8, 29, 0.43)
+  );
+}
+
+/* =========================================================
+   04. IMAGE HOVER ANIMATION
+   ========================================================= */
+
+.image-hover img {
+  transition: transform 0.6s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   05. MARQUEE ANIMATION
+   ========================================================= */
+
+.marquee {
+  animation: move 22s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes move {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================================================
+   06. A1 SWEETS FOOTER - START
+
+   All footer styles use the .a1-footer prefix.
+   These styles do not affect other website sections.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   06.1 MAIN FOOTER
+   --------------------------------------------------------- */
+
+.a1-footer {
+  position: relative;
+  width: 100%;
+  background-color: #080b12;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.a1-footer * {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   06.2 FOOTER BACKGROUND IMAGE
+   --------------------------------------------------------- */
+
+.a1-footer-main {
+  position: relative;
+  width: 100%;
+  min-height: 610px;
+  background-image: url('/images/footer-bg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+
+.a1-footer-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   06.3 FOOTER CONTENT
+   --------------------------------------------------------- */
+
+.a1-footer-content {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1170px;
+  min-height: 510px;
+
+  margin: 0 auto;
+  padding: 70px 20px 55px;
+
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   06.4 FOOTER LOGO
+   --------------------------------------------------------- */
+
+.a1-footer-logo {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.a1-footer-logo-image {
+  display: block;
+  width: 165px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------------------------------------------------------
+   06.5 FOOTER ADDRESS
+   --------------------------------------------------------- */
+
+.a1-footer-address {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* ---------------------------------------------------------
+   06.6 FOOTER EMAIL AND TELEPHONE
+   --------------------------------------------------------- */
+
+.a1-footer-contact {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #e83e2d;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.a1-footer-contact:hover {
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   06.7 SOCIAL MEDIA ICONS
+   --------------------------------------------------------- */
+
+.a1-footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.a1-footer-social-link {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.a1-footer-social-link:hover {
+  color: #e83e2d;
+  transform: translateY(-4px);
+}
+
+/* ---------------------------------------------------------
+   06.8 FOOTER NAVIGATION WRAPPER
+   --------------------------------------------------------- */
+
+.a1-footer-navigation-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------------------------------------------------------
+   06.9 FOOTER NAVIGATION LINKS
+   --------------------------------------------------------- */
+
+.a1-footer-navigation {
+  display: flex;
+  min-height: 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  column-gap: 28px;
+  row-gap: 15px;
+
+  padding: 25px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.a1-footer-nav-link {
+  display: inline-block;
+  color: #e83e2d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.a1-footer-nav-link:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   07. A1 SWEETS FOOTER - COPYRIGHT BAR
+   ========================================================= */
+
+.a1-footer-bottom {
+  position: relative;
+  width: 100%;
+  min-height: 94px;
+  background-color: #00111f;
+  color: #ffffff;
+}
+
+/* Copyright content container */
+
+.a1-footer-bottom-content {
+  display: flex;
+  width: 100%;
+  max-width: 1525px;
+  min-height: 94px;
+
+  margin: 0 auto;
+  padding: 20px 110px 20px 25px;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Copyright and developer credit */
+
+.a1-footer-copyright,
+.a1-footer-developer {
+  margin: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.a1-footer-developer {
+  text-align: right;
+}
+
+/* ---------------------------------------------------------
+   07.1 SCROLL TO TOP BUTTON
+   --------------------------------------------------------- */
+
+.a1-footer-scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+
+  display: flex;
+  width: 75px;
+  height: 94px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 0;
+
+  background-color: #f00032;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.a1-footer-scroll:hover {
+  background-color: #c9002b;
+}
+
+.a1-footer-scroll:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: -4px;
+}
+
+/* =========================================================
+   08. A1 SWEETS FOOTER - RESPONSIVE TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .a1-footer-bottom-content {
+    padding-right: 95px;
+  }
+
+  .a1-footer-copyright,
+  .a1-footer-developer {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   09. A1 SWEETS FOOTER - RESPONSIVE MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .a1-footer-main {
+    min-height: auto;
+    background-position: center center;
+  }
+
+  .a1-footer-content {
+    min-height: 420px;
+    padding: 60px 20px 45px;
+  }
+
+  .a1-footer-logo-image {
+    width: 145px;
+  }
+
+  .a1-footer-address,
+  .a1-footer-contact {
+    font-size: 14px;
+  }
+
+  .a1-footer-social {
+    gap: 25px;
+  }
+
+  .a1-footer-navigation {
+    min-height: auto;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 14px;
+    padding: 25px 0;
+  }
+
+  .a1-footer-nav-link {
+    font-size: 14px;
+  }
+
+  .a1-footer-bottom {
+    min-height: 100px;
+  }
+
+  .a1-footer-bottom-content {
+    min-height: 100px;
+    padding: 20px 80px 20px 15px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .a1-footer-copyright,
+  .a1-footer-developer {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .a1-footer-scroll {
+    width: 65px;
+    height: 100%;
+  }
+}
+
+/* =========================================================
+   A1 SWEETS FOOTER - END
+   ========================================================= */
+
+/* =========================================================
+   10. ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

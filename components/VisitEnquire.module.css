@@ -1,0 +1,318 @@
+/* =========================================================
+   A1 SWEETS - VISIT OR ENQUIRE SECTION
+   All styles are scoped to VisitEnquire.module.css
+   ========================================================= */
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px 90px;
+  background: #fffdf5;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: #f12b2b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+}
+
+.title {
+  margin: 0;
+  color: #191a4f;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(38px, 4.5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+
+.headingLine {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 24px auto 0;
+  background: #ffe83b;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 25px auto 0;
+  color: #5d6177;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* THREE CARD GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  min-width: 0;
+  animation: cardReveal 700ms ease both;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background: #191a4f;
+  isolation: isolate;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 700ms ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 10, 24, 0.04) 0%,
+    rgba(7, 10, 24, 0.22) 35%,
+    rgba(7, 10, 24, 0.92) 100%
+  );
+  transition: background 350ms ease;
+}
+
+.cardNumber {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.cardContent {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 2;
+  padding: 34px 30px 36px;
+  color: #ffffff;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 22px;
+  background: #f12b2b;
+  color: #ffffff;
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffe83b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(27px, 2.6vw, 38px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.description {
+  min-height: 75px;
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 46px;
+  padding: 12px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 300ms ease,
+    border-color 300ms ease,
+    color 300ms ease;
+}
+
+.cardButton:hover {
+  background: #f12b2b;
+  border-color: #f12b2b;
+  color: #ffffff;
+}
+
+/* BOTTOM MESSAGE */
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.bottom p {
+  margin: 0;
+  color: #5d6177;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.bottomLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f12b2b;
+  color: #191a4f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+
+.bottomLink:hover {
+  color: #f12b2b;
+}
+
+/* ANIMATION */
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 80px 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .imageWrapper {
+    height: 470px;
+  }
+
+  .cardContent {
+    padding: 28px 24px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .section {
+    padding: 65px 16px;
+  }
+
+  .heading {
+    margin-bottom: 38px;
+  }
+
+  .title {
+    font-size: clamp(36px, 9vw, 48px);
+  }
+
+  .intro {
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .imageWrapper {
+    height: 460px;
+  }
+
+  .cardContent {
+    padding: 28px 24px;
+  }
+
+  .description {
+    min-height: auto;
+  }
+
+  .bottom {
+    margin-top: 35px;
+    flex-direction: column;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+
+  .image,
+  .cardButton,
+  .bottomLink {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   A1 SWEETS - VISIT OR ENQUIRE SECTION END
+   ========================================================= */

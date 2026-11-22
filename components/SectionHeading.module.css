@@ -1,0 +1,45 @@
+/* =====================================================
+   A1 SWEETS - SECTION HEADING ONLY
+   ===================================================== */
+
+.sectionHeading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.tag {
+  display: block;
+  margin-bottom: 16px;
+  color: #e83e2d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #191a43;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.divider {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 22px auto;
+  background-color: #ffeb45;
+}
+
+.description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #55566a;
+  font-size: 16px;
+  line-height: 1.8;
+}

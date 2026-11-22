@@ -1,0 +1,391 @@
+/* =========================================================
+   A1 SWEETS — TESTIMONIALS ONLY
+   Scoped CSS module: no global selectors or other sections
+   ========================================================= */
+.section {
+  background: #fff6d6;
+  color: #191a43;
+  padding: 100px 24px 110px;
+  overflow: hidden;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.heading {
+  text-align: center;
+  margin: 0 auto 62px;
+  max-width: 740px;
+}
+.kicker {
+  display: block;
+  color: #e83e2d;
+  font:
+    800 12px/1.5 Arial,
+    Helvetica,
+    sans-serif;
+  letter-spacing: 0.23em;
+  margin-bottom: 14px;
+}
+.title {
+  font:
+    400 clamp(37px, 4.6vw, 61px)/1.16 Georgia,
+    'Times New Roman',
+    serif;
+  letter-spacing: -0.045em;
+  margin: 0;
+  color: #191a43;
+}
+.title em {
+  color: #e83e2d;
+  font-weight: 400;
+}
+.rule {
+  display: block;
+  width: 65px;
+  height: 4px;
+  background: #ffeb45;
+  margin: 23px auto 20px;
+}
+.intro {
+  font:
+    400 16px/1.8 Arial,
+    Helvetica,
+    sans-serif;
+  color: #5f6174;
+  margin: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(36px, 6vw, 90px);
+}
+.visual {
+  height: 470px;
+  position: relative;
+  isolation: isolate;
+}
+.visual:before {
+  content: '';
+  position: absolute;
+  width: 79%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff1d7;
+  top: 2%;
+  left: 5%;
+  z-index: -1;
+}
+.imageMain {
+  position: absolute;
+  left: 6%;
+  top: 7%;
+  width: 76%;
+  aspect-ratio: 1;
+  height: auto;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 25px 65px #1c1b3821;
+  overflow: hidden;
+}
+.imageSmall {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 39%;
+  aspect-ratio: 1;
+  height: auto;
+  border: 9px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 16px 40px #1c1b381a;
+}
+.imageAccent {
+  position: absolute;
+  right: 1%;
+  top: 0;
+  width: 27%;
+  aspect-ratio: 1;
+  height: auto;
+  border: 7px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 32px #1c1b381a;
+}
+.foodImage {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  padding: 0 !important;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+.visual:hover .foodImage {
+  transform: scale(1.07);
+}
+.visualCaption {
+  position: absolute;
+  left: 0;
+  bottom: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px 22px;
+  background: #191a43;
+  color: white;
+  box-shadow: 0 12px 25px #191a432b;
+}
+.visualCaption span {
+  font:
+    700 10px Arial,
+    sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ffeb45;
+}
+.visualCaption strong {
+  font:
+    italic 23px Georgia,
+    serif;
+  font-weight: 400;
+}
+.reviewPanel {
+  background: #fff;
+  border: 1px solid #f2eee6;
+  box-shadow: 0 18px 65px #25223c0b;
+  padding: clamp(30px, 4vw, 54px);
+  position: relative;
+  min-height: 390px;
+}
+.reviewPanel:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75px;
+  height: 4px;
+  background: #e83e2d;
+}
+.quoteIcon {
+  color: #e83e2d;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+.stars {
+  display: flex;
+  gap: 5px;
+  color: #e9a62d;
+  margin-bottom: 18px;
+}
+.stars svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  stroke: currentColor;
+}
+.reviewBody {
+  animation: reviewAppear 0.4s ease both;
+}
+.quote {
+  font:
+    400 clamp(18px, 2vw, 23px)/1.7 Georgia,
+    'Times New Roman',
+    serif;
+  color: #292a46;
+  margin: 0 0 28px;
+  min-height: 125px;
+}
+.person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background: #fff0cf;
+  color: #191a43;
+  font:
+    700 22px Georgia,
+    serif;
+}
+.name {
+  display: block;
+  font:
+    700 15px Arial,
+    Helvetica,
+    sans-serif;
+  color: #191a43;
+  margin-bottom: 5px;
+}
+.personSub {
+  display: block;
+  font:
+    400 12px Arial,
+    Helvetica,
+    sans-serif;
+  color: #838495;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e9e7e3;
+  margin-top: 28px;
+  padding-top: 22px;
+}
+.counter {
+  font:
+    700 18px Arial,
+    sans-serif;
+  color: #e83e2d;
+}
+.counter span {
+  font-size: 13px;
+  color: #9999a6;
+  font-weight: 400;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons button {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e8e5e0;
+  background: #fff;
+  color: #191a43;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+.buttons button:hover {
+  background: #191a43;
+  color: #fff;
+  border-color: #191a43;
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 22px;
+}
+.dot,
+.dotActive {
+  height: 7px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    width 0.2s,
+    background 0.2s;
+}
+.dot {
+  width: 7px;
+  background: #d6d6db;
+}
+.dotActive {
+  width: 27px;
+  background: #e83e2d;
+}
+.buttons button:focus-visible,
+.dots button:focus-visible {
+  outline: 2px solid #e83e2d;
+  outline-offset: 4px;
+}
+@keyframes reviewAppear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 850px) {
+  .section {
+    padding: 75px 20px;
+  }
+  .heading {
+    margin-bottom: 35px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .visual {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    height: 410px;
+  }
+  .reviewPanel {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 16px;
+  }
+  .visual {
+    height: 300px;
+  }
+  .visualCaption {
+    bottom: 0;
+    padding: 10px 14px;
+  }
+  .visualCaption strong {
+    font-size: 17px;
+  }
+  .reviewPanel {
+    padding: 26px 22px;
+    min-height: 0;
+  }
+  .quote {
+    min-height: 0;
+    font-size: 18px;
+  }
+  .heading {
+    margin-bottom: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reviewBody {
+    animation: none;
+  }
+  .foodImage,
+  .dot,
+  .dotActive,
+  .buttons button {
+    transition: none;
+  }
+}
+
+/* Circle image overrides scoped to Testimonials only. */
+.imageMain img,
+.imageSmall img,
+.imageAccent img {
+  display: block;
+  object-fit: cover !important;
+  object-position: center !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
