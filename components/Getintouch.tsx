@@ -1,3 +1,5 @@
+import { Leaf } from 'lucide-react'
+import SectionHeading from './SectionHeading'
 ;<section id="contact" className="bg-[#fff6d6] py-24 px-6">
   <div className="max-w-7xl mx-auto">
     <SectionHeading tag="Get in Touch" title="Visit or Enquire" />
