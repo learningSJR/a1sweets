@@ -1,0 +1,152 @@
+/* =========================================
+   A1 SWEETS - FEATURE STRIP
+   Scoped CSS Module
+========================================= */
+
+.featureStrip {
+  position: relative;
+  width: 100%;
+  background: #191a4a;
+  color: #ffffff;
+  overflow: hidden;
+  border-top: 3px solid #ffe34d;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 118px;
+  margin: 0 auto;
+  padding: 24px 25px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+}
+
+.feature {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+}
+
+.iconBox {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #fff5ca;
+  color: #ed302d;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.feature:hover .iconBox {
+  background: #ffe34d;
+  transform: rotate(-5deg);
+}
+
+.content {
+  min-width: 0;
+}
+
+.content h3 {
+  margin: 0 0 5px;
+  color: #ffe34d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.divider {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 48px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 22px 25px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 18px;
+  }
+
+  .feature {
+    padding: 12px 8px;
+  }
+
+  .iconBox {
+    width: 48px;
+    height: 48px;
+  }
+
+  .content h3 {
+    font-size: 12px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .feature,
+  .iconBox {
+    transition: none;
+  }
+
+  .feature:hover,
+  .feature:hover .iconBox {
+    transform: none;
+  }
+}

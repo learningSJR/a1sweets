@@ -10,6 +10,7 @@ import Gallery from '../components/Gallery'
 import SectionHeading from '../components/SectionHeading'
 import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
+import FeatureStrip from '@/components/FeatureStrip'
 
 const I = '/images/'
 const dishes = [
@@ -46,12 +47,7 @@ export default function Home() {
     <main>
       <Header />
       <HeroSlider />
-      <div className="bg-yellow text-navy overflow-hidden py-4">
-        <div className="marquee eyebrow">
-          100% PURE VEGETARIAN ✦ AUTHENTIC INDIAN FLAVOURS ✦ DINE IN ✦ TAKEOUT ✦
-          OUTDOOR CATERING ✦ 100% PURE VEGETARIAN ✦ AUTHENTIC INDIAN FLAVOURS ✦
-        </div>
-      </div>
+      <FeatureStrip />
       <section id="about" className="py-24 px-6 max-w-7xl mx-auto">
         <motion.div
           {...appear}
