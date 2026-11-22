@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Leaf } from 'lucide-react'
 import Header from '../components/Header'
 import HeroSlider from '../components/HeroSlider'
+import About from '../components/About'
 import VisitEnquire from '../components/VisitEnquire'
 import Gallery from '../components/Gallery'
 import SectionHeading from '../components/SectionHeading'
@@ -48,46 +49,7 @@ export default function Home() {
       <Header />
       <HeroSlider />
       <FeatureStrip />
-      <section id="about" className="py-24 px-6 max-w-7xl mx-auto">
-        <motion.div
-          {...appear}
-          className="grid md:grid-cols-2 gap-14 items-center"
-        >
-          <div className="relative">
-            <img
-              src={I + 'about_2_2.png'}
-              alt="A1 Sweets vegetarian food selection"
-              className="w-full rounded-xl"
-            />
-            <img
-              src={I + 'red_chili.png'}
-              alt=""
-              className="absolute w-24 -bottom-7 -left-5 hidden md:block"
-            />
-          </div>
-          <div>
-            <p className="eyebrow text-red mb-4">Our Story</p>
-            <h2 className="display text-5xl md:text-6xl text-navy leading-tight">
-              Welcome to <span className="text-red">A1 Sweets</span>
-            </h2>
-            <div className="w-20 h-1 bg-yellow my-7" />
-            <p className="leading-8 text-gray-700 mb-5">
-              Experience the delicious flavours of Indian vegetarian cuisine,
-              from satisfying meals to irresistible sweets.
-            </p>
-            <p className="leading-8 text-gray-700 mb-8">
-              We bring together traditional recipes and fresh ingredients for
-              everyday meals, special occasions and celebrations.
-            </p>
-            <a
-              href="#contact"
-              className="inline-block bg-navy text-white px-8 py-4 uppercase tracking-wider text-xs font-bold"
-            >
-              Discover More →
-            </a>
-          </div>
-        </motion.div>
-      </section>
+      <About />
       <section id="specials" className="bg-[#fff6d6] py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
